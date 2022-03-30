@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_banking_app/pages/add_button_page.dart';
+import 'package:mobile_banking_app/pages/full_statement.dart';
+import 'package:mobile_banking_app/pages/merchant_payment.dart';
 import 'package:mobile_banking_app/pages/user_profile.dart';
 
 class BottomNavigationBarHome extends StatefulWidget {
@@ -15,9 +18,9 @@ class _BottomNavigationBarHomeState extends State<BottomNavigationBarHome> {
   List tabs = [
     HomePageBody(),
     // FavouriteAccount(),
-    // AddButtonPage(),
-    // FullStatement(),
-    // MerchantPayment(),
+    AddButtonPage(),
+    FullStatement(),
+    MerchantPayment(),
   ];
 
   @override
