@@ -1,16 +1,13 @@
-# mobile_banking_app
+# Mobile Banking App Clone
 
-A new Flutter project.
+This is a machhapunchchre mobile banking App clone build from flutter and dart.
 
-## Getting Started
+below are the screenshots of the App
 
-This project is a starting point for a Flutter application.
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/52662002/160846159-dcd4b397-758c-4e23-9518-0c45a2772a85.jpg" width="250" /> 
+  <img src="https://user-images.githubusercontent.com/52662002/160846207-48a9586f-a017-45e3-adbf-c996753f8526.jpg" width="250" /> 
+  
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+</p>
