@@ -59,7 +59,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: BottomNavigationBarHome());
+    return const Scaffold(body: BottomNavigationBarHome());
   }
 }
 
@@ -99,12 +99,12 @@ class HomePageBody extends StatelessWidget {
               width: double.infinity,
               child: Column(
                 children: [
-                  YourBalanaceSection(),
-                  QuickLinks(),
-                  SizedBox(
+                  const YourBalanaceSection(),
+                  const QuickLinks(),
+                  const SizedBox(
                     height: 10,
                   ),
-                  Container(
+                  SizedBox(
                     height: MediaQuery.of(context).size.height * 0.32,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
