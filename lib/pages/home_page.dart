@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_banking_app/pages/user_profile.dart';
 
 class BottomNavigationBarHome extends StatefulWidget {
   const BottomNavigationBarHome({Key? key}) : super(key: key);
@@ -69,9 +70,9 @@ class HomePageBody extends StatelessWidget {
       appBar: AppBar(
         leading: InkWell(
           onTap: () {
-            // Navigator.push(context, MaterialPageRoute(builder: (context) {
-            //   return const UserProfile();
-            // }));
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return const UserProfile();
+            }));
           },
           child: const CircleAvatar(
             radius: 20,
