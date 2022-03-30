@@ -3,6 +3,7 @@ import 'package:mobile_banking_app/pages/add_button_page.dart';
 import 'package:mobile_banking_app/pages/favourite_account.dart';
 import 'package:mobile_banking_app/pages/full_statement.dart';
 import 'package:mobile_banking_app/pages/merchant_payment.dart';
+import 'package:mobile_banking_app/pages/my_account_page.dart';
 import 'package:mobile_banking_app/pages/user_profile.dart';
 
 class BottomNavigationBarHome extends StatefulWidget {
@@ -205,10 +206,10 @@ class QuickLinks extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        // Navigator.push(context,
-                        //     MaterialPageRoute(builder: (context) {
-                        //   return MyAccount();
-                        // }));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return const MyAccount();
+                        }));
                       },
                       child: Column(
                         children: const [
