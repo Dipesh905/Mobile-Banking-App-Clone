@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_banking_app/consts/colors.dart';
 
 class AddFavouriteAccount extends StatefulWidget {
   const AddFavouriteAccount({Key? key}) : super(key: key);
@@ -8,10 +9,7 @@ class AddFavouriteAccount extends StatefulWidget {
 }
 
 class _AddFavouriteAccountState extends State<AddFavouriteAccount> {
-  // Initial Selected Value
   String dropdownvalue = 'Machhapuchhre Bank';
-
-  // List of items in our dropdown menu
   var items = [
     'Machhapuchhre Bank',
     'Nic Asia Bank',
@@ -39,7 +37,6 @@ class _AddFavouriteAccountState extends State<AddFavouriteAccount> {
                       autofocus: true,
                       decoration: InputDecoration(
                         hintText: "Account Number",
-                        // border: InputBorder.none
                       ),
                     ),
                   ),
@@ -47,28 +44,20 @@ class _AddFavouriteAccountState extends State<AddFavouriteAccount> {
                     subtitle: TextField(
                       decoration: InputDecoration(
                         hintText: "Account Name",
-                        //  border: InputBorder.none
                       ),
                     ),
                   ),
                   ListTile(
                     title: const Text("Bank Name"),
                     subtitle: DropdownButton(
-                      // Initial Value
                       value: dropdownvalue,
-
-                      // Down Arrow Icon
                       icon: const Icon(Icons.keyboard_arrow_down),
-
-                      // Array list of items
                       items: items.map((String items) {
                         return DropdownMenuItem(
                           value: items,
                           child: Text(items),
                         );
                       }).toList(),
-                      // After selecting the desired option,it will
-                      // change button value to selected value
                       onChanged: (String? newValue) {
                         setState(() {
                           dropdownvalue = newValue!;
@@ -88,17 +77,12 @@ class _AddFavouriteAccountState extends State<AddFavouriteAccount> {
                     ),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        gradient: LinearGradient(colors: [
-                          Colors.red.shade500,
-                          Colors.red.shade600,
-                          Colors.red.shade800,
-                        ])),
+                        gradient: buttonGradientColor),
                   ),
                   MaterialButton(
                     onPressed: () {},
                     child: const Text(
                       "Cancel",
-                      // style: TextStyle(color: Colors.white),
                     ),
                   ),
                 ],

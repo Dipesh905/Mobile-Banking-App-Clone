@@ -8,3 +8,9 @@ Gradient gradientColor = LinearGradient(colors: [
   Colors.blue.shade600,
   Colors.blue.shade900,
 ], begin: Alignment.topLeft, end: Alignment.bottomRight);
+
+Gradient buttonGradientColor = LinearGradient(colors: [
+  Colors.red.shade500,
+  Colors.red.shade600,
+  Colors.red.shade800,
+]);

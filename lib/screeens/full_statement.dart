@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_banking_app/consts/colors.dart';
 
 class FullStatement extends StatefulWidget {
   const FullStatement({Key? key}) : super(key: key);
@@ -54,10 +55,8 @@ class _FullStatementState extends State<FullStatement> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
             Container(
+              padding: const EdgeInsets.only(top: 10),
               height: 40,
               width: MediaQuery.of(context).size.width * 0.92,
               child: MaterialButton(
@@ -69,13 +68,7 @@ class _FullStatementState extends State<FullStatement> {
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                gradient: LinearGradient(
-                  colors: [
-                    Colors.red.shade500,
-                    Colors.red.shade600,
-                    Colors.red.shade800,
-                  ],
-                ),
+                gradient: buttonGradientColor,
               ),
             ),
           ],
