@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_banking_app/model/quick_link_model.dart';
 import 'package:mobile_banking_app/screeens/home_page.dart';
+import 'package:mobile_banking_app/widgets/quick_links_card.dart';
 
 class QuickLinks extends StatelessWidget {
   const QuickLinks({

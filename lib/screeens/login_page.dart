@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_banking_app/consts/colors.dart';
 import 'package:mobile_banking_app/screeens/home_page.dart';
 import 'package:mobile_banking_app/widgets/connect_with_us_card.dart';
 import 'package:mobile_banking_app/widgets/digital_payment_method.dart';
@@ -38,17 +39,8 @@ class _LoginScreenState extends State<LoginScreen> {
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
           decoration: (BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                Colors.red.shade800,
-                Colors.red.shade500,
-                Colors.red.shade200,
-                Colors.blue.shade400,
-                Colors.blue.shade600,
-                Colors.blue.shade900,
-              ]))),
+            gradient: gradientColor,
+          )),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
