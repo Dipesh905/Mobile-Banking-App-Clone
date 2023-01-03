@@ -1,7 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mobile_banking_app/pages/home_page.dart';
+import 'package:mobile_banking_app/images/images.dart';
+import 'package:mobile_banking_app/screeens/home_page.dart';
+import 'package:mobile_banking_app/widgets/digital_payment_method.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -12,12 +14,6 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool remember = false;
-  List imgList = [
-    "assets/bhaktapurdurbar.jpg",
-    "assets/Pashupatinath.jpg",
-    "assets/pokhara.jpg",
-    "assets/Sarankot.jpg"
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -225,188 +221,6 @@ class _LoginScreenState extends State<LoginScreen> {
               ],
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class UseDigitalPaymentmethod extends StatelessWidget {
-  const UseDigitalPaymentmethod({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text('Use Digital Payment Method'),
-                Row(
-                  children: const [Text("Load More"), Icon(Icons.arrow_right)],
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 110,
-              width: double.infinity,
-              //  color: Colors.amber,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          child: Icon(
-                            Icons.electrical_services,
-                            size: 30,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text("Electricity")
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          child: Icon(
-                            Icons.money,
-                            size: 30,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text("Revenue")
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          child: Icon(
-                            Icons.airplanemode_on,
-                            size: 30,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text("Airlines")
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          child: Icon(
-                            Icons.water,
-                            size: 30,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text("Khanepani")
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          child: Icon(
-                            Icons.open_in_browser,
-                            size: 30,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text("ISP")
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          child: Icon(
-                            Icons.tv,
-                            size: 30,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text("Tv Payment")
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          child: Icon(
-                            Icons.payment,
-                            size: 30,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text("Insurance")
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      children: const [
-                        CircleAvatar(
-                          radius: 30,
-                          child: Icon(
-                            Icons.bus_alert,
-                            size: 30,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text("Bus")
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            )
-          ],
         ),
       ),
     );

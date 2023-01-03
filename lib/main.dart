@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_app/pages/login_page.dart';
+import 'package:mobile_banking_app/screeens/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Mobile Banking App Clone',
+        title: 'Mobile Banking App',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_app/pages/add_button_page.dart';
-import 'package:mobile_banking_app/pages/favourite_account.dart';
-import 'package:mobile_banking_app/pages/full_statement.dart';
-import 'package:mobile_banking_app/pages/merchant_payment.dart';
-import 'package:mobile_banking_app/pages/my_account_page.dart';
-import 'package:mobile_banking_app/pages/user_profile.dart';
+import 'package:mobile_banking_app/screeens/add_button_page.dart';
+import 'package:mobile_banking_app/screeens/favourite_account.dart';
+import 'package:mobile_banking_app/screeens/full_statement.dart';
+import 'package:mobile_banking_app/screeens/merchant_payment.dart';
+import 'package:mobile_banking_app/screeens/my_account_page.dart';
+import 'package:mobile_banking_app/screeens/user_profile.dart';
 
 class BottomNavigationBarHome extends StatefulWidget {
   const BottomNavigationBarHome({Key? key}) : super(key: key);

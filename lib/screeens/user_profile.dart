@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_app/pages/login_page.dart';
+import 'package:mobile_banking_app/screeens/login_page.dart';
 
 class UserProfile extends StatefulWidget {
   const UserProfile({Key? key}) : super(key: key);
