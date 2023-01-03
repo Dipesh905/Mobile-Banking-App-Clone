@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_banking_app/model/quick_link_model.dart';
 import 'package:mobile_banking_app/screeens/add_button_page.dart';
 import 'package:mobile_banking_app/screeens/favourite_account.dart';
 import 'package:mobile_banking_app/screeens/full_statement.dart';
 import 'package:mobile_banking_app/screeens/merchant_payment.dart';
 import 'package:mobile_banking_app/screeens/my_account_page.dart';
 import 'package:mobile_banking_app/screeens/user_profile.dart';
+import 'package:mobile_banking_app/widgets/quick_link_widget.dart';
 
 class BottomNavigationBarHome extends StatefulWidget {
   const BottomNavigationBarHome({Key? key}) : super(key: key);
@@ -105,53 +107,48 @@ class HomePageBody extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.32,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "ACCOUNT ACTIVITIES",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        Card(
-                          child: ListTile(
-                            title: Text("Mobile Banking Annual fee"),
-                            subtitle: Text("Dec 26, 2021"),
-                            trailing: Text(
-                              "300",
-                              style: TextStyle(
-                                  color: Colors.red,
-                                  fontWeight: FontWeight.bold),
-                            ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "ACCOUNT ACTIVITIES",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      Card(
+                        child: ListTile(
+                          title: Text("Mobile Banking Annual fee"),
+                          subtitle: Text("Dec 26, 2021"),
+                          trailing: Text(
+                            "300",
+                            style: TextStyle(
+                                color: Colors.red, fontWeight: FontWeight.bold),
                           ),
                         ),
-                        Card(
-                          child: ListTile(
-                            title: Text("MERO SHARE RENEWED"),
-                            subtitle: Text("Dec 06, 2021"),
-                            trailing: Text(
-                              "300",
-                              style: TextStyle(
-                                  color: Colors.red,
-                                  fontWeight: FontWeight.bold),
-                            ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          title: Text("MERO SHARE RENEWED"),
+                          subtitle: Text("Dec 06, 2021"),
+                          trailing: Text(
+                            "300",
+                            style: TextStyle(
+                                color: Colors.red, fontWeight: FontWeight.bold),
                           ),
                         ),
-                        Card(
-                          child: ListTile(
-                            title: Text("Dipesh Ghimire"),
-                            subtitle: Text("Dec 10, 2021"),
-                            trailing: Text(
-                              "1000",
-                              style: TextStyle(
-                                  color: Colors.green,
-                                  fontWeight: FontWeight.bold),
-                            ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          title: Text("Dipesh Ghimire"),
+                          subtitle: Text("Dec 10, 2021"),
+                          trailing: Text(
+                            "1000",
+                            style: TextStyle(
+                                color: Colors.green,
+                                fontWeight: FontWeight.bold),
                           ),
-                        )
-                      ],
-                    ),
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),
@@ -172,215 +169,33 @@ class HomePageBody extends StatelessWidget {
   }
 }
 
-class QuickLinks extends StatelessWidget {
-  const QuickLinks({
-    Key? key,
-  }) : super(key: key);
+class QuickLinksCard extends StatelessWidget {
+  const QuickLinksCard({required this.title, required this.icon, this.onTap});
+
+  final IconData icon;
+  final String title;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const ListTile(
-          title: Text(
-            "Quick Links",
-            style: TextStyle(
-                fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
+    return InkWell(
+      onTap: onTap,
+      child: Column(
+        children: [
+          Icon(
+            icon,
+            color: Colors.red,
+            size: 50,
           ),
-          trailing: Text(
-            "Edit",
-            style: TextStyle(
-              color: Colors.white,
+          Padding(
+            padding: const EdgeInsets.only(top: 5),
+            child: Text(
+              title,
+              style: const TextStyle(color: Colors.blue),
             ),
-          ),
-        ),
-        Container(
-          height: MediaQuery.of(context).size.height * 0.32,
-          width: double.infinity,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return const MyAccount();
-                        }));
-                      },
-                      child: Column(
-                        children: const [
-                          Icon(
-                            Icons.account_balance,
-                            color: Colors.red,
-                            size: 50,
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "My Account",
-                            style: TextStyle(color: Colors.blue),
-                          )
-                        ],
-                      ),
-                    ),
-                    Column(
-                      children: const [
-                        Icon(
-                          Icons.credit_card,
-                          color: Colors.red,
-                          size: 50,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Payment",
-                          style: TextStyle(color: Colors.blue),
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: const [
-                        Icon(
-                          Icons.send_to_mobile,
-                          color: Colors.red,
-                          size: 50,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Send Money",
-                          style: TextStyle(color: Colors.blue),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      children: const [
-                        Icon(
-                          Icons.card_membership,
-                          color: Colors.red,
-                          size: 50,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Dispute Lodge",
-                          style: TextStyle(color: Colors.blue),
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: const [
-                        Icon(
-                          Icons.book,
-                          color: Colors.red,
-                          size: 50,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Invoice History",
-                          style: TextStyle(color: Colors.blue),
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: const [
-                        Icon(
-                          Icons.message,
-                          color: Colors.red,
-                          size: 50,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Complain",
-                          style: TextStyle(color: Colors.blue),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      children: const [
-                        Icon(
-                          Icons.local_activity,
-                          color: Colors.red,
-                          size: 50,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Activity Log",
-                          style: TextStyle(color: Colors.blue),
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: const [
-                        Icon(
-                          Icons.settings,
-                          color: Colors.red,
-                          size: 50,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Settings",
-                          style: TextStyle(color: Colors.blue),
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: const [
-                        Icon(
-                          Icons.money,
-                          color: Colors.red,
-                          size: 50,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "esewa",
-                          style: TextStyle(color: Colors.blue),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(5)),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }

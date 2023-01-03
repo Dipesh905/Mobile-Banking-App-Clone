@@ -1,9 +1,8 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mobile_banking_app/images/images.dart';
 import 'package:mobile_banking_app/screeens/home_page.dart';
+import 'package:mobile_banking_app/widgets/connect_with_us_card.dart';
 import 'package:mobile_banking_app/widgets/digital_payment_method.dart';
+import 'package:mobile_banking_app/widgets/image_slider_widget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -124,37 +123,21 @@ class _LoginScreenState extends State<LoginScreen> {
                             Icon(
                               Icons.fingerprint,
                             ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            InkWell(
-                              child: Text(
-                                "Tap to Login With Fingerprint",
+                            Padding(
+                              padding: EdgeInsets.only(left: 5),
+                              child: InkWell(
+                                child: Text(
+                                  "Tap to Login With Fingerprint",
+                                ),
                               ),
                             )
                           ],
                         ),
-                        // SizedBox(
-                        //   height: 10,
-                        // ),
-                        // Text("Unable to Login? tap Here!")
                       ],
                     ),
                   ),
                 ),
-                CarouselSlider(
-                  options: CarouselOptions(
-                    autoPlay: true,
-                    aspectRatio: 16 / 9,
-                  ),
-                  items: imgList
-                      .map((item) => Center(
-                          child: Image.asset(item,
-                              fit: BoxFit.fill,
-                              height: 180,
-                              width: double.infinity)))
-                      .toList(),
-                ),
+                const ImageSliderWidget(),
                 const UseDigitalPaymentmethod(),
                 Container(
                   height: 50,
@@ -186,37 +169,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         Colors.red.shade800,
                       ])),
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Text(
-                  "Connect With Us",
-                  style: TextStyle(color: Colors.white, fontSize: 22),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CircleAvatar(
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: const FaIcon(FontAwesomeIcons.facebook)),
-                    ),
-                    CircleAvatar(
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: const FaIcon(FontAwesomeIcons.twitter)),
-                    ),
-                    CircleAvatar(
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: const FaIcon(FontAwesomeIcons.linkedin)),
-                    ),
-                    CircleAvatar(
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: const FaIcon(FontAwesomeIcons.instagram)),
-                    )
-                  ],
+                const Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: ConnectWithUsCard(),
                 )
               ],
             ),

@@ -25,7 +25,6 @@ class UseDigitalPaymentmethod extends StatelessWidget {
             SizedBox(
               height: 110,
               width: double.infinity,
-              //  color: Colors.amber,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
