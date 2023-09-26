@@ -13,12 +13,12 @@ class UseDigitalPaymentmethod extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('Use Digital Payment Method'),
+                Text('Use Digital Payment Method'),
                 Row(
-                  children: const [Text("Load More"), Icon(Icons.arrow_right)],
+                  children: [Text("Load More"), Icon(Icons.arrow_right)],
                 ),
               ],
             ),

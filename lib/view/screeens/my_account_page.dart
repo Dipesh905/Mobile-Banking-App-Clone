@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class MyAccount extends StatefulWidget {
+class MyAccount extends StatelessWidget {
   const MyAccount({Key? key}) : super(key: key);
 
-  @override
-  _MyAccountState createState() => _MyAccountState();
-}
-
-class _MyAccountState extends State<MyAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,11 +29,11 @@ class _MyAccountState extends State<MyAccount> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'SAVING NORMAL',
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -73,17 +68,17 @@ class _MyAccountState extends State<MyAccount> {
               height: MediaQuery.of(context).size.height * 0.25,
               width: MediaQuery.of(context).size.width,
               color: Colors.white,
-              child: Column(
+              child: const Column(
                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children: [
                             Text(
                               'Available Balance',
                             ),
@@ -93,12 +88,12 @@ class _MyAccountState extends State<MyAccount> {
                             ),
                           ],
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 10,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children: [
                             Text(
                               'Actual Balance',
                             ),
@@ -107,12 +102,12 @@ class _MyAccountState extends State<MyAccount> {
                             ),
                           ],
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 10,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children: [
                             Text(
                               'Accrued Interest',
                             ),
@@ -121,12 +116,12 @@ class _MyAccountState extends State<MyAccount> {
                             ),
                           ],
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 10,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children: [
                             Text(
                               'Interest Rate',
                             ),
@@ -135,7 +130,7 @@ class _MyAccountState extends State<MyAccount> {
                             ),
                           ],
                         ),
-                        const Divider(
+                        Divider(
                           color: Colors.grey,
                           //   thickness: 2.0,
                         ),
@@ -143,7 +138,7 @@ class _MyAccountState extends State<MyAccount> {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Column(
-                              children: const [
+                              children: [
                                 Icon(
                                   Icons.send_to_mobile,
                                   color: Colors.red,
@@ -159,7 +154,7 @@ class _MyAccountState extends State<MyAccount> {
                               ],
                             ),
                             Column(
-                              children: const [
+                              children: [
                                 Icon(
                                   Icons.payment,
                                   color: Colors.red,
@@ -175,7 +170,7 @@ class _MyAccountState extends State<MyAccount> {
                               ],
                             ),
                             Column(
-                              children: const [
+                              children: [
                                 Icon(
                                   Icons.book,
                                   color: Colors.red,

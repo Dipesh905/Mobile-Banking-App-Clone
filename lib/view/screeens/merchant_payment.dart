@@ -3,6 +3,15 @@ import 'package:flutter/material.dart';
 class MerchantPayment extends StatelessWidget {
   const MerchantPayment({Key? key}) : super(key: key);
 
+  static const List<String> merchantSections = [
+    'Dispute Lodge',
+    'Invoice History',
+    'Complain',
+    'Activity Log',
+    'Settings',
+    'Alert Log'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,51 +23,20 @@ class MerchantPayment extends StatelessWidget {
         children: [
           Card(
             elevation: 5,
-            child: Column(
-              children: const [
-                ListTile(
-                  title: Text(
-                    "Dispute Lodge",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Divider(
-                  thickness: 2,
-                ),
-                ListTile(
-                  title: Text("Invoice History",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                ),
-                Divider(
-                  thickness: 2,
-                ),
-                ListTile(
-                  title: Text("Complain",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                ),
-                Divider(
-                  thickness: 2,
-                ),
-                ListTile(
-                  title: Text("Activity Log",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                ),
-                Divider(
-                  thickness: 2,
-                ),
-                ListTile(
-                  title: Text("Settings",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                ),
-                Divider(
-                  thickness: 2,
-                ),
-                ListTile(
-                  title: Text("Alert Log",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                )
-              ],
-            ),
+            child: ListView.separated(
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(
+                      merchantSections[index],
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return const Divider();
+                },
+                itemCount: merchantSections.length),
           )
         ],
       ),

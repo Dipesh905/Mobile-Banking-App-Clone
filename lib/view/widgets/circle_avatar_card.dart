@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CircleAvatarCard extends StatelessWidget {
-  CircleAvatarCard({required this.cardTitle, required this.cardicon});
+  const CircleAvatarCard(
+      {super.key, required this.cardTitle, required this.cardicon});
 
   final String cardTitle;
   final IconData cardicon;

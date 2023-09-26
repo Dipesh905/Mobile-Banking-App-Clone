@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_banking_app/controller/consts/colors.dart';
 
-class FullStatement extends StatefulWidget {
+class FullStatement extends StatelessWidget {
   const FullStatement({Key? key}) : super(key: key);
 
-  @override
-  _FullStatementState createState() => _FullStatementState();
-}
-
-class _FullStatementState extends State<FullStatement> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,30 +15,30 @@ class _FullStatementState extends State<FullStatement> {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
-            Card(
+            const Card(
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Column(
                   children: [
                     ListTile(
                       leading: Column(
-                        children: const [
+                        children: [
                           Text("FROM"),
                           Text("Nov 28, 2021"),
                         ],
                       ),
-                      subtitle: const Icon(
+                      subtitle: Icon(
                         Icons.arrow_right,
                         size: 40,
                       ),
                       trailing: Column(
-                        children: const [
+                        children: [
                           Text("TO"),
                           Text("Dec 28, 2021"),
                         ],
                       ),
                     ),
-                    const ListTile(
+                    ListTile(
                       title: Text("Dipesh Ghimire"),
                       leading: CircleAvatar(
                         child: Text("DG"),
