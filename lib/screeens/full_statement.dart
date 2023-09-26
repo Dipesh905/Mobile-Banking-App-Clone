@@ -68,7 +68,7 @@ class _FullStatementState extends State<FullStatement> {
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                gradient: buttonGradientColor,
+                gradient: AppColor.buttonGradientColor,
               ),
             ),
           ],

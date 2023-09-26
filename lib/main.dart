@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_banking_app/consts/colors.dart';
 import 'package:mobile_banking_app/screeens/login_page.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         title: 'Mobile Banking App',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: AppColor.materialBlueColor,
         ),
         home: const LoginScreen());
   }

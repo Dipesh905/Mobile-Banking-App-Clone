@@ -77,7 +77,7 @@ class _AddFavouriteAccountState extends State<AddFavouriteAccount> {
                     ),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        gradient: buttonGradientColor),
+                        gradient: AppColor.buttonGradientColor),
                   ),
                   MaterialButton(
                     onPressed: () {},

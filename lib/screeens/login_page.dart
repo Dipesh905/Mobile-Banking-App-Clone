@@ -27,11 +27,12 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         actions: [
           IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.qr_code_scanner,
-                color: Colors.red,
-              )),
+            onPressed: () {},
+            icon: const Icon(
+              Icons.qr_code_scanner,
+              color: Colors.red,
+            ),
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -39,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
           decoration: (BoxDecoration(
-            gradient: gradientColor,
+            gradient: AppColor.gradientColor,
           )),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -109,9 +110,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         const SizedBox(
                           height: 10,
                         ),
-                        Row(
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
+                          children: [
                             Icon(
                               Icons.fingerprint,
                             ),

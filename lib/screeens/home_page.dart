@@ -106,7 +106,7 @@ class HomePageBody extends StatelessWidget {
                   AccountActivityWidget()
                 ],
               ),
-              decoration: BoxDecoration(gradient: gradientColor),
+              decoration: BoxDecoration(gradient: AppColor.gradientColor),
             )
           ],
         ),
