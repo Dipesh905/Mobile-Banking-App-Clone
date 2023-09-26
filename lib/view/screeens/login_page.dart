@@ -6,6 +6,7 @@ import 'package:mobile_banking_app/view/screeens/home_page.dart';
 import 'package:mobile_banking_app/view/widgets/connect_with_us_card.dart';
 import 'package:mobile_banking_app/view/widgets/digital_payment_method.dart';
 import 'package:mobile_banking_app/view/widgets/image_slider_widget.dart';
+import 'package:mobile_banking_app/view/widgets/input_field_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
@@ -64,7 +65,7 @@ class LoginScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
                         children: [
-                          TextFormField(
+                          InputFieldWidget(
                             validator: (value) {
                               if (value != null && value.isNotEmpty) {
                                 return null;
@@ -76,17 +77,16 @@ class LoginScreen extends StatelessWidget {
                             keyboardType: TextInputType.phone,
                             controller: phoneNumberController,
                             decoration: const InputDecoration(
-                              hintText: "Mobile Number",
-                            ),
+                                hintText: "Mobile Number", counterText: ''),
                           ),
                           Consumer(
                             builder: (context, ref, child) {
                               final obsecureText =
                                   ref.watch(obsecureTextProvider);
 
-                              return TextFormField(
+                              return InputFieldWidget(
                                 controller: passwordController,
-                                obscureText: obsecureText,
+                                obsecureText: obsecureText,
                                 validator: (value) {
                                   if (value != null && value.isNotEmpty) {
                                     return null;
