@@ -1,6 +1,27 @@
 # Mobile Banking App Clone
 
-This is a machhapunchchre mobile banking App clone build from flutter and dart.
+This is a machhapunchchre mobile banking app clone build from flutter and dart.
+
+## Getting Started
+
+Clone mobile banking app to your local computer:
+
+```dart
+git clone https://github.com/Dipesh905/Mobile-Banking-App-Clone
+```
+then run pub get
+
+You have now sucessfully cloned mobile banking app. now you can run the project in your local computer
+
+## Cloned Screens
+- Login Screen
+- HomeScreen
+- Profile Screen
+- Account Detail Screen
+
+## Packages Used
+- carousel_slider (https://pub.dev/packages/carousel_slider)
+- font_awesome_flutter (https://pub.dev/packages/font_awesome_flutter)
 
 below are the screenshots of the App
 
