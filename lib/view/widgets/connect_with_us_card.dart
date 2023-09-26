@@ -8,38 +8,42 @@ class ConnectWithUsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const Text(
-          "Connect With Us",
-          style: TextStyle(color: Colors.white, fontSize: 22),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CircleAvatar(
-              child: IconButton(
-                  onPressed: () {},
-                  icon: const FaIcon(FontAwesomeIcons.facebook)),
-            ),
-            CircleAvatar(
-              child: IconButton(
-                  onPressed: () {},
-                  icon: const FaIcon(FontAwesomeIcons.twitter)),
-            ),
-            CircleAvatar(
-              child: IconButton(
-                  onPressed: () {},
-                  icon: const FaIcon(FontAwesomeIcons.linkedin)),
-            ),
-            CircleAvatar(
-              child: IconButton(
-                  onPressed: () {},
-                  icon: const FaIcon(FontAwesomeIcons.instagram)),
-            )
-          ],
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(top: 8.0),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text(
+            "Connect With Us",
+            style: TextStyle(color: Colors.white, fontSize: 22),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                child: IconButton(
+                    onPressed: () {},
+                    icon: const FaIcon(FontAwesomeIcons.facebook)),
+              ),
+              CircleAvatar(
+                child: IconButton(
+                    onPressed: () {},
+                    icon: const FaIcon(FontAwesomeIcons.twitter)),
+              ),
+              CircleAvatar(
+                child: IconButton(
+                    onPressed: () {},
+                    icon: const FaIcon(FontAwesomeIcons.linkedin)),
+              ),
+              CircleAvatar(
+                child: IconButton(
+                    onPressed: () {},
+                    icon: const FaIcon(FontAwesomeIcons.instagram)),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }

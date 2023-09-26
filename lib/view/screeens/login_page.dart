@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile_banking_app/controller/consts/colors.dart';
 import 'package:mobile_banking_app/controller/provider/login_screen_provider.dart';
-import 'package:mobile_banking_app/view/screeens/home_page.dart';
+import 'package:mobile_banking_app/view/screeens/main_screen.dart';
+import 'package:mobile_banking_app/view/widgets/branches_and_atm_card_widget.dart';
 import 'package:mobile_banking_app/view/widgets/connect_with_us_card.dart';
 import 'package:mobile_banking_app/view/widgets/digital_payment_method.dart';
 import 'package:mobile_banking_app/view/widgets/image_slider_widget.dart';
@@ -141,7 +142,7 @@ class LoginScreen extends StatelessWidget {
                                       passwordController.text == 'P@ssw0rd11') {
                                     Navigator.pushReplacement(context,
                                         MaterialPageRoute(builder: (context) {
-                                      return const HomePage();
+                                      return const MainScreen();
                                     }));
                                   } else {
                                     showDialog(
@@ -200,40 +201,8 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const ImageSliderWidget(),
                   const UseDigitalPaymentmethod(),
-                  Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width * 0.92,
-                    child: MaterialButton(
-                      onPressed: () {},
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
-                            "Branches And ATM's",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.atm,
-                                color: Colors.white,
-                                size: 35,
-                              ))
-                        ],
-                      ),
-                    ),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        gradient: LinearGradient(colors: [
-                          Colors.red.shade500,
-                          Colors.red.shade600,
-                          Colors.red.shade800,
-                        ])),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 10),
-                    child: ConnectWithUsCard(),
-                  )
+                  const BranchesAndAtmCardWidget(),
+                  const ConnectWithUsCard()
                 ],
               ),
             ),
