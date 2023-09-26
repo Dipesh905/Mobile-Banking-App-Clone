@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_app/consts/colors.dart';
+import 'package:mobile_banking_app/controller/consts/colors.dart';
 
 class AddFavouriteAccount extends StatefulWidget {
   const AddFavouriteAccount({Key? key}) : super(key: key);

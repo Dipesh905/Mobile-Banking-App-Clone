@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_app/screeens/add_favourite_account.dart';
+import 'package:mobile_banking_app/view/screeens/add_favourite_account.dart';
 
 class FavouriteAccount extends StatefulWidget {
   const FavouriteAccount({Key? key}) : super(key: key);

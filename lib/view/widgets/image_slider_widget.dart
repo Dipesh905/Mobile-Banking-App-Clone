@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_app/images/images.dart';
+import 'package:mobile_banking_app/controller/images/images.dart';
 
 class ImageSliderWidget extends StatelessWidget {
   const ImageSliderWidget({

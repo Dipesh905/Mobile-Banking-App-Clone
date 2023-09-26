@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_app/consts/colors.dart';
-import 'package:mobile_banking_app/screeens/home_page.dart';
-import 'package:mobile_banking_app/widgets/connect_with_us_card.dart';
-import 'package:mobile_banking_app/widgets/digital_payment_method.dart';
-import 'package:mobile_banking_app/widgets/image_slider_widget.dart';
+import 'package:mobile_banking_app/controller/consts/colors.dart';
+import 'package:mobile_banking_app/view/screeens/home_page.dart';
+import 'package:mobile_banking_app/view/widgets/connect_with_us_card.dart';
+import 'package:mobile_banking_app/view/widgets/digital_payment_method.dart';
+import 'package:mobile_banking_app/view/widgets/image_slider_widget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

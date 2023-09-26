@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_app/consts/colors.dart';
-import 'package:mobile_banking_app/screeens/add_button_page.dart';
-import 'package:mobile_banking_app/screeens/favourite_account.dart';
-import 'package:mobile_banking_app/screeens/full_statement.dart';
-import 'package:mobile_banking_app/screeens/merchant_payment.dart';
-import 'package:mobile_banking_app/screeens/user_profile.dart';
-import 'package:mobile_banking_app/widgets/account_activity_widget.dart';
-import 'package:mobile_banking_app/widgets/quick_link_widget.dart';
-import 'package:mobile_banking_app/widgets/your_balance_section.dart';
+import 'package:mobile_banking_app/controller/consts/colors.dart';
+import 'package:mobile_banking_app/view/screeens/add_button_page.dart';
+import 'package:mobile_banking_app/view/screeens/favourite_account.dart';
+import 'package:mobile_banking_app/view/screeens/full_statement.dart';
+import 'package:mobile_banking_app/view/screeens/merchant_payment.dart';
+import 'package:mobile_banking_app/view/screeens/user_profile.dart';
+import 'package:mobile_banking_app/view/widgets/account_activity_widget.dart';
+import 'package:mobile_banking_app/view/widgets/quick_link_widget.dart';
+import 'package:mobile_banking_app/view/widgets/your_balance_section.dart';
 
 class BottomNavigationBarHome extends StatefulWidget {
   const BottomNavigationBarHome({Key? key}) : super(key: key);

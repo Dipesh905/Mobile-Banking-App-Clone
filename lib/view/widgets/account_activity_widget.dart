@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_app/model/account_activity_model.dart';
+import 'package:mobile_banking_app/controller/data/account_activity_data.dart';
 
 class AccountActivityWidget extends StatelessWidget {
   const AccountActivityWidget({

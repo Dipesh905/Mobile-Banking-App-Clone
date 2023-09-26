@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_banking_app/widgets/circle_avatar_card.dart';
+import 'package:mobile_banking_app/view/widgets/circle_avatar_card.dart';
 
 class UseDigitalPaymentmethod extends StatelessWidget {
   const UseDigitalPaymentmethod({
