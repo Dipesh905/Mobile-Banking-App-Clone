@@ -18,8 +18,9 @@ class _UserProfileState extends State<UserProfile> {
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const LoginScreen();
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) {
+                  return LoginScreen();
                 }));
               },
               icon: const Icon(Icons.exit_to_app))
