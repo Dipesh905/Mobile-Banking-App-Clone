@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile_banking_app/controller/consts/colors.dart';
+import 'package:mobile_banking_app/controller/provider/login_remember_me_provider.dart';
 import 'package:mobile_banking_app/view/screeens/home_page.dart';
 import 'package:mobile_banking_app/view/widgets/connect_with_us_card.dart';
 import 'package:mobile_banking_app/view/widgets/digital_payment_method.dart';
 import 'package:mobile_banking_app/view/widgets/image_slider_widget.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
-
-  @override
-  _LoginScreenState createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  bool remember = false;
 
   @override
   Widget build(BuildContext context) {
@@ -74,13 +69,20 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Row(
                           children: [
-                            Checkbox(
-                                value: remember,
-                                onChanged: (val) {
-                                  setState(() {
-                                    remember = val!;
-                                  });
-                                }),
+                            Consumer(
+                              builder: (context, ref, child) {
+                                bool isRememberMeChecked =
+                                    ref.watch(loginRememberMeProvider);
+                                return Checkbox(
+                                    value: isRememberMeChecked,
+                                    onChanged: (val) {
+                                      ref
+                                          .read(
+                                              loginRememberMeProvider.notifier)
+                                          .update((state) => !state);
+                                    });
+                              },
+                            ),
                             const Text("Remember Mobile Number ")
                           ],
                         ),
