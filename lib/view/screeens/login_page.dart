@@ -149,6 +149,7 @@ class LoginScreen extends StatelessWidget {
                                       context: context,
                                       builder: (context) {
                                         return const AlertDialog(
+                                          backgroundColor: Colors.red,
                                           title: Text('Error Logging In'),
                                           content: Text(
                                               'Phone Number Or Password do not match'),

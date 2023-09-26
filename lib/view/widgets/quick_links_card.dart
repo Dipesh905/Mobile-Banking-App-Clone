@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class QuickLinksCard extends StatelessWidget {
-  const QuickLinksCard({required this.title, required this.icon, this.onTap});
+  const QuickLinksCard(
+      {super.key, required this.title, required this.icon, this.onTap});
 
   final IconData icon;
   final String title;

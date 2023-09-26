@@ -13,11 +13,11 @@ class YourBalanceSection extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.15,
           width: MediaQuery.of(context).size.height * 0.3,
           color: Colors.blue,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text(
                   "YOUR BALANCE",
                   style: TextStyle(color: Colors.white),
@@ -49,9 +49,9 @@ class YourBalanceSection extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.15,
           width: MediaQuery.of(context).size.height * 0.12,
           color: Colors.blue,
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Icon(
                 Icons.add,
                 color: Colors.white,

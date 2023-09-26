@@ -9,6 +9,7 @@ class InputFieldWidget extends StatelessWidget {
     this.validator,
     this.obsecureText = false,
     this.readOnly = false,
+    this.autofocus = false,
     this.onTap,
     super.key,
     this.keyboardType,
@@ -70,10 +71,14 @@ class InputFieldWidget extends StatelessWidget {
   /// input decoration
   final InputDecoration? decoration;
 
+  /// autofocus
+  final bool autofocus;
+
   @override
   Widget build(BuildContext context) => Padding(
         padding: const EdgeInsets.all(8),
         child: TextFormField(
+          autofocus: autofocus,
           onTap: onTap,
           readOnly: readOnly,
           keyboardType: keyboardType,
